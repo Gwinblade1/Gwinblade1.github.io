@@ -112,6 +112,10 @@
         }
     }
 
+    .selected-link{
+        display: none;
+    }
+
     .active{
         color: #70c7c7;
     }
@@ -224,6 +228,9 @@
 
         &:hover{
             box-shadow: 0 0 24px rgba($color: #000000, $alpha: 0.24);
+            .lookbook-content__item-inner{
+                z-index: 5;
+            }
         }
 
         &-inner{
@@ -253,10 +260,6 @@
                     background-color: #000000;
                     color: #ffffff;
                 }
-            }
-
-            &--active{
-                z-index: 5;
             }
         }
     }

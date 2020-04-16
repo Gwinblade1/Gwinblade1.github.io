@@ -181,9 +181,17 @@
                 background-color: #ededed;
             }
         }
+        .selected-link{
+            display: block;
+            opacity: 0;
+        }
         .active{
             color: #727272;
             background-color: #ededed;
+            .selected-link{
+                display: block;
+                opacity: 1;
+            }
         }
     }
 }

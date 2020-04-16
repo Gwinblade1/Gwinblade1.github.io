@@ -589,6 +589,10 @@ template {
   outline: none;
 }
 
+.lookbook-filter .selected-link {
+  display: none;
+}
+
 .lookbook-filter .active {
   color: #70c7c7;
 }
@@ -711,6 +715,10 @@ template {
   box-shadow: 0 0 24px rgba(0, 0, 0, 0.24);
 }
 
+.lookbook-content__item:hover .lookbook-content__item-inner {
+  z-index: 5;
+}
+
 .lookbook-content__item-inner {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -757,10 +765,6 @@ template {
 .lookbook-content__item-inner a:hover {
   background-color: #000000;
   color: #ffffff;
-}
-
-.lookbook-content__item-inner--active {
-  z-index: 5;
 }
 
 .choice-lookbook {
@@ -995,9 +999,17 @@ template {
   .lookbook-filter__item:hover {
     background-color: #ededed;
   }
+  .lookbook-filter .selected-link {
+    display: block;
+    opacity: 0;
+  }
   .lookbook-filter .active {
     color: #727272;
     background-color: #ededed;
+  }
+  .lookbook-filter .active .selected-link {
+    display: block;
+    opacity: 1;
   }
 }
 
