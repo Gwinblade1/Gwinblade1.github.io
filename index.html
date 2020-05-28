@@ -1,18 +1,316 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset='utf-8'>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="css/style.css">
-<link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet"> 
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> 
-<title>Brand Store</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Stores</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/localStores.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </head>
 <body>
+    <header>
+        <nav class="first-nav">
+            <div class="fnav-wrapper">
+                <div class="currency">
+                    <span>Currency: </span>
+                    <span id="currency-type">UAH<i class="fa fa-angle-down"></i></span>
+                </div>
+                <div class="user-interaction-menu">
+                    <div class="user-account-buttons">
+                        <a>Register</a>
+                        <a>Sign In</a>
+                    </div>
+                    <a id="shopping-cart"><i class="fa fa-shopping-cart"></i><span id="cart-status">empty</span><i class="fa fa-angle-down"></i>
+                    </a>
+                </div>
+            </div>
+        </nav>
+        <nav class="second-nav">
+            <div id="MenuToggle">
+                <input type="checkbox"/>
+                <span></span>
+                <span></span>
+                <span></span>
+                <ul id="menu">
+                        <li>
+                        <div class="dropdown">
+                            <a class="menu-link" href="#">mens
+                            <i class="fa fa-angle-down"></i></a>
+                            <div class="dropdown-content-responsive">
+                                <div class="clothes-responsive">
+                                    <div class="casuals-cloth-type-responsive">
+                                        <span id="casuals-title-responsive">CASUALS</span>
+                                        <ul class="products-casual-clothes-list-responsive">
+                                            <li>Jackets</li>
+                                            <li>Hoodies & Sweatshirts</li>
+                                            <li>Polo Shirts</li>
+                                            <li>Sportswear</li>
+                                            <li>Trousers & Chinos</li>
+                                            <li>T-Shirts</li>
+                                        </ul>
+                                    </div>
+                                    <div class="formal-cloth-type">
+                                        <span id="formal-title-responsive">FORMAL</span>
+                                        <ul class="product-formal-clothes-list-responsive">
+                                            <li>Jackets</li>
+                                            <li>Shirts</li>
+                                            <li>Suits</li>
+                                            <li>Trousers</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </li>
+                        <li>
+                            <div class="dropdown">
+                                <a class="menu-link" href="#">womens
+                                <i class="fa fa-angle-down"></i></a>
+                                <div class="dropdown-content-responsive">
+                                    <div class="clothes-responsive">
+                                        <div class="casuals-cloth-type-responsive">
+                                            <h4 id="casuals-title-responsive">CASUALS</h4>
+                                            <ul class="products-casual-clothes-list-responsive">
+                                                <li>Jackets</li>
+                                                <li>Hoodies & Sweatshirts</li>
+                                                <li>Polo Shirts</li>
+                                                <li>Sportswear</li>
+                                                <li>Trousers & Chinos</li>
+                                                <li>T-Shirts</li>
+                                            </ul>
+                                        </div>
+                                        <div class="formal-cloth-type">
+                                            <h4 id="formal-title-responsive">FORMAL</h4>
+                                            <ul class="product-formal-clothes-list-responsive">
+                                                <li>Jackets</li>
+                                                <li>Shirts</li>
+                                                <li>Suits</li>
+                                                <li>Trousers</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li><a class="menu-link" href="#">the brand</a></li>
+                        <li>
+                            <div class="dropdown">
+                                <a class="menu-link" href="#">local stores
+                                <i class="fa fa-angle-down"></i></a>
+                                <div class="dropdown-content-responsive">
+                                    <div class="clothes-responsive">
+                                        <div class="casuals-cloth-type-responsive">
+                                            <h4 id="casuals-title-responsive">CASUALS</h4>
+                                            <ul class="products-casual-clothes-list-responsive">
+                                                <li>Jackets</li>
+                                                <li>Hoodies & Sweatshirts</li>
+                                                <li>Polo Shirts</li>
+                                                <li>Sportswear</li>
+                                                <li>Trousers & Chinos</li>
+                                                <li>T-Shirts</li>
+                                            </ul>
+                                        </div>
+                                        <div class="formal-cloth-type">
+                                            <h4 id="formal-title-responsive">FORMAL</h4>
+                                            <ul class="product-formal-clothes-list-responsive">
+                                                <li>Jackets</li>
+                                                <li>Shirts</li>
+                                                <li>Suits</li>
+                                                <li>Trousers</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="dropdown">
+                                <a class="menu-link" href="#">look book
+                                <i class="fa fa-angle-down"></i></a>
+                                <div class="dropdown-content-responsive">
+                                    <div class="clothes-responsive">
+                                        <div class="casuals-cloth-type-responsive">
+                                            <h4 id="casuals-title-responsive">CASUALS</h4>
+                                            <ul class="products-casual-clothes-list-responsive">
+                                                <li>Jackets</li>
+                                                <li>Hoodies & Sweatshirts</li>
+                                                <li>Polo Shirts</li>
+                                                <li>Sportswear</li>
+                                                <li>Trousers & Chinos</li>
+                                                <li>T-Shirts</li>
+                                            </ul>
+                                        </div>
+                                        <div class="formal-cloth-type">
+                                            <h4 id="formal-title-responsive">FORMAL</h4>
+                                            <ul class="product-formal-clothes-list-responsive">
+                                                <li>Jackets</li>
+                                                <li>Shirts</li>
+                                                <li>Suits</li>
+                                                <li>Trousers</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- <li>
+                        <div class="goods-search-responsive">
+                                <input id="search-responsive" type="search" placeholder="Search...">
+                                <span class="search-icon"><i class="fa fa-search"></i></span>
+                        </div>
+                        </li> -->
+                  </ul>
+            </div>
+            <div class="secondNav-wrapper">
+                <div class="logo">avenu<span id="fashion">fashion</span></div>
+                <div class="goods-categories">
 
-    <header class="header">
+                    <div class="dropdown">
+                        <a class="menu-link" href="#">mens
+                            <br><i class="fa fa-angle-down"></i></a>
+                        <div class="dropdown-content">
+                            <div class="clothes">
+                                <div class="casuals-cloth-type">
+                                    <span id="casuals-title">CASUALS</span>
+                                    <ul class="products-casual-clothes-list">
+                                        <li>Jackets</li>
+                                        <li>Hoodies & Sweatshirts</li>
+                                        <li>Polo Shirts</li>
+                                        <li>Sportswear</li>
+                                        <li>Trousers & Chinos</li>
+                                        <li>T-Shirts</li>
+                                    </ul>
+                                </div>
+                                <div class="formal-cloth-type">
+                                    <span id="formal-title">FORMAL</span>
+                                    <ul class="product-formal-clothes-list">
+                                        <li>Jackets</li>
+                                        <li>Shirts</li>
+                                        <li>Suits</li>
+                                        <li>Trousers</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="season-sale">
+                                <span id="season-sale-words">AUTUMN SALE!</span>
+                                <span id="season-discount-amount">UP TO 50% OFF</span>
+                            </div>
+                        </div>
+                    </div>
 
+                    <div class="dropdown">
+                        <a class="menu-link" href="#">womens
+                            <br><i class="fa fa-angle-down"></i></a>
+                        <div class="dropdown-content">
+                            <div class="clothes">
+                                <div class="casuals-cloth-type">
+                                    <span id="casuals-title">CASUALS</span>
+                                    <ul class="products-casual-clothes-list">
+                                        <li>Jackets</li>
+                                        <li>Hoodies&Sweatshirts</li>
+                                        <li>Polo Shirts</li>
+                                        <li>Sportswear</li>
+                                        <li>Trousers & Chinos</li>
+                                        <li>T-Shirts</li>
+                                    </ul>
+                                </div>
+                                <div class="formal-cloth-type">
+                                    <span id="formal-title">FORMAL</span>
+                                    <ul class="product-formal-clothes-list">
+                                        <li>Jackets</li>
+                                        <li>Shirts</li>
+                                        <li>Suits</li>
+                                        <li>Trousers</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="season-sale">
+                                <span id="season-sale-words">AUTUMN SALE!</span>
+                                <span id="season-discount-amount">UP TO 50% OFF</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a class="menu-link" href="#">the brand</a>
+                    <div class="dropdown">
+                        <a class="menu-link" href="#">local stores
+                            <br><i class="fa fa-angle-down"></i></a>
+                        <div class="dropdown-content">
+                            <div class="clothes">
+                                <div class="casuals-cloth-type">
+                                    <span id="casuals-title">CASUALS</span>
+                                    <ul class="products-casual-clothes-list">
+                                        <li>Jackets</li>
+                                        <li>Hoodies&Sweatshirts</li>
+                                        <li>Polo Shirts</li>
+                                        <li>Sportswear</li>
+                                        <li>Trousers & Chinos</li>
+                                        <li>T-Shirts</li>
+                                    </ul>
+                                </div>
+                                <div class="formal-cloth-type">
+                                    <span id="formal-title">FORMAL</span>
+                                    <ul class="product-formal-clothes-list">
+                                        <li>Jackets</li>
+                                        <li>Shirts</li>
+                                        <li>Suits</li>
+                                        <li>Trousers</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="season-sale">
+                                <span id="season-sale-words">AUTUMN SALE!</span>
+                                <span id="season-discount-amount">UP TO 50% OFF</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <a class="menu-link" href="#">look book
+                            <br><i class="fa fa-angle-down"></i></a>
+                        <div class="dropdown-content">
+                            <div class="clothes">
+                                <div class="casuals-cloth-type">
+                                    <span id="casuals-title">CASUALS</span>
+                                    <ul class="products-casual-clothes-list">
+                                        <li>Jackets</li>
+                                        <li>Hoodies&Sweatshirts</li>
+                                        <li>Polo Shirts</li>
+                                        <li>Sportswear</li>
+                                        <li>Trousers & Chinos</li>
+                                        <li>T-Shirts</li>
+                                    </ul>
+                                </div>
+                                <div class="formal-cloth-type">
+                                    <span id="formal-title">FORMAL</span>
+                                    <ul class="product-formal-clothes-list">
+                                        <li>Jackets</li>
+                                        <li>Shirts</li>
+                                        <li>Suits</li>
+                                        <li>Trousers</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="season-sale">
+                                <span id="season-sale-words">AUTUMN SALE!</span>
+                                <span id="season-discount-amount">UP TO 50% OFF</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="goods-search">
+                        <input id="search" type="search" placeholder="Search...">
+                        <span class="search-icon"><i class="fa fa-search"></i></span>
+                    </div>
+                </div>
+            </div>
+          
+        </nav>
+    </div>
     </header>
 
     <main>
@@ -26,204 +324,202 @@
             </div>
             <div class="intro-container">
                 <div class="intro-container__title">
-                    <span>our</span> lookbook
+                    <span>local</span> stores
                 </div>
                 <div class="intro-container__subtitle">
-                    Latest Posts - mens & womens
+                    find a store near you
                 </div>
             </div>
         </section>
-    
-        <section class="lookbook">
+        <section class="locations">
             <div class="container">
-                <div class="lookbook-filter">
-                    <div class="lookbook-filter__menu">
-                        <div class="lookbook-filter__item active">
-                            <div class="selected-link">
-                                <span><i class="fas fa-check"></i></span>
-                            </div> 
-                            latest
-                        </div>
-                        <div class="lookbook-filter__item">
-                            <div class="selected-link">
-                                <span><i class="fas fa-check"></i></span>
+                <div class="locations-inner">
+                    <div class="locations-city">
+                        <div class="city-inner">
+                            <div class="locations-city__title city-title">
+                                London
                             </div>
-                            most liked
-                        </div>
-                        <div class="lookbook-filter__item">
-                            <div class="selected-link">
-                                <span><i class="fas fa-check"></i></span>
+                            <div class="locations-city__subtitle city-subtitle">
+                                180-182 Regent Street, London, W1B 5BT
                             </div>
-                            best sellers
-                        </div>
-                        <div class="lookbook-filter__item">
-                            <div class="selected-link">
-                                <span><i class="fas fa-check"></i></span>
-                            </div>
-                            price low to high
-                        </div>
-                        <div class="lookbook-filter__item">
-                            <div class="selected-link">
-                                <span><i class="fas fa-check"></i></span>
-                            </div>
-                            price high to low
-                        </div>
-                    </div>
-                    <button class="lookbook-filter__sort-btn">
-                        Sort by <span><i class="fas fa-angle-down"></i></span>
-                    </button>    
-                </div>
-    
-                <div class="lookbook-content">
-                    
-                    <div class="lookbook-content__banner-janes">
-                        <div class="lookbook-content__banner-title">
-                            <span>jane's</span> lookbook
-                        </div>
-                        <div class="lookbook-content__banner-subtitle">
-                            get the look for under £200! copy
-                        </div>
-                        <div class="lookbook-content__banner-text">
-                                We invited actress Jane Marshall to join us
-                                for the day and choose her perfect outfit from
-                                our vast range of womens fashion.
-                        </div>
-                        <div class="lookbook-content__banner-button">
-                            view now
-                        </div>
-                    </div>
-    
-                    <div class="lookbook-content__item" style="background-image: url(images/item-1.png)">
-                        <div class="lookbook-content__item-inner">
-                            <a href="#"><i class="fas fa-info"></i></a>
-                            <a href="#"><i class="fas fa-heart"></i></a>
-                        </div>
-                    </div>
-                    <div class="lookbook-content__item" style="background-image: url(images/item-2.jpg)">
-                        <div class="lookbook-content__item-inner">
-                            <a href="#"><i class="fas fa-info"></i></a>
-                            <a href="#"><i class="fas fa-heart"></i></a>
-                        </div>
-                    </div>
-                    
-                    <div class="lookbook-content__item" style="background-image: url(images/item-3.jpg)">
-                        <div class="lookbook-content__item-inner">
-                            <a href="#"><i class="fas fa-info"></i></a>
-                            <a href="#"><i class="fas fa-heart"></i></a>
-                        </div>
-                    </div>
-                    <div class="lookbook-content__item" style="background-image: url(images/item-4.jpg)">
-                        <div class="lookbook-content__item-inner">
-                            <a href="#"><i class="fas fa-info"></i></a>
-                            <a href="#"><i class="fas fa-heart"></i></a>
-                        </div>
-                    </div>
-                    <div class="lookbook-content__item" style="background-image: url(images/item-5.jpg)">
-                        <div class="lookbook-content__item-inner">
-                            <a href="#"><i class="fas fa-info"></i></a>
-                            <a href="#"><i class="fas fa-heart"></i></a>
-                        </div>
-                    </div>
-                    <div class="lookbook-content__item" style="background-image: url(images/item-6.jpg)">
-                        <div class="lookbook-content__item-inner">
-                            <a href="#"><i class="fas fa-info"></i></a>
-                            <a href="#"><i class="fas fa-heart"></i></a>
-                        </div>
-                    </div>
-                    <div class="lookbook-content__banner-win">
-                        <div class="lookbook-content__banner-title">
-                            <span>Win</span> a new look!
-                        </div>
-                        <div class="lookbook-content__banner-subtitle">
-                            add looks or items to your lookbook for a chance of winning 
-                        </div>
-                        <div class="lookbook-content__banner-text">
-                            <p>
-                                See an item or a complete look you like, click the <span><i class="far fa-heart"></i></span>
-                                button to add it to your lookbook and you'll be automatically
-                                entered to our monthly draw where one winner gets a <b>£300</b> gift
-                                voucher to spend on our website!
-                            </p>
-                            <p>
-                                Terms: No purchase necessary. Vouchers are non-transferable
-                                and no cash alternative is ofered. Competition is for members only.
-                            </p>
-                        </div>
-                        <div class="lookbook-content__banner-button">
-                            shop now
-                        </div>
-                        <div class="lookbook-content__banner-title--banner-win">
-                            Win
-                            <div class="lookbook-content__banner-subtitle--banner-win">
-                                a new look
+                            <div class="locations-city__text city-text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing esi
+                                elit. Vivamus at arcu sem. Vestibulum ornare eleifendit
+                                massa, nec tempor odio. Fusce posuere nunc iaculis ligula
+                                viverra iaculis. Aliquam erat volutpat. 
                             </div>
                         </div>
+                        <a href="#" class="locations-city__button">
+                            view details
+                        </a>
                     </div>
-                    <div class="lookbook-content__item" style="background-image: url(images/item-7.jpg)">
-                        <div class="lookbook-content__item-inner">
-                            <a href="#"><i class="fas fa-info"></i></a>
-                            <a href="#"><i class="fas fa-heart"></i></a>
+                    <div class="locations-city">
+                        <div class="city-inner">
+                            <div class="locations-city__title city-title">
+                                new york
+                            </div>
+                            <div class="locations-city__subtitle city-subtitle">
+                                109 Columbus Circle, New York, NY 10023 
+                            </div>
+                            <div class="locations-city__text city-text">
+                                Nunc non posuere nisl. Etiam finibus vel dui nec lobortis.
+                                Aliquam egestas, sem quis condimentum venenatis, erat leo 
+                                fermentum dolor, non sollicitudin massa mi eu nibh. Nullam 
+                                vitae aliquam dui, non sodales nisl. 
+                            </div>
                         </div>
+                        <a href="#" class="locations-city__button">
+                            view details
+                        </a>
+                    </div>
+                    <div class="locations-city">
+                        <div class="city-inner">
+                            <div class="locations-city__title city-title">
+                                paris
+                            </div>
+                            <div class="locations-city__subtitle city-subtitle">
+                                2133 Rue Saint-Honoré, 75001 Paris 
+                            </div>
+                            <div class="locations-city__text city-text">
+                                Ut interdum fermentum blandit. Donec nec lacus egetit 
+                                mi rhoncus eleifend. Curabitur laoreet nisl eget rutruml auctor. 
+                                Vestibulum ante ipsum primis in faucibus orcip luctus et ultrices 
+                                posuere cubilia curae cras ligula. 
+                            </div>
+                        </div>
+                        <a href="#" class="locations-city__button">
+                            view details
+                        </a>
                     </div>
                 </div>
             </div>
         </section>
-    
-        <section class="choice-lookbook">
-            <div class="your-lookbook" style="background-image: url(images/men.jpg);">
-                <div class="choice-lookbook__title">
-                    Men's
-                    <div class="choice-lookbook__subtitle">
-                        lookbook
-                    </div>
-                </div>
-                <div class="lookbook-content__banner-text">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia beatae amet earum, ab iste temporibus saepe molestiae necessitatibus sed impedit quaerat modi fugiat maxime, quibusdam et! Tempora similique in at
-                </div>
-                <div class="lookbook-content__banner-button">
-                    view now
+        <section class="details">
+            <div class="details-map" style="background-image: url(images/map.jpg);">
+                <div class="details-map__marker">
+                    <i class="fa fa-map-marker"></i>
                 </div>
             </div>
-            <div class="your-lookbook" style="background-image: url(images/women.jpg);">
-                <div class="choice-lookbook__title">
-                    women's
-                    <div class="choice-lookbook__subtitle">
-                        lookbook
-                    </div>
+            <div class="details-content">
+                <div class="details-content__title city-title">
+                    london
                 </div>
-                <div class="lookbook-content__banner-text">
-                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia beatae amet earum, ab iste temporibus saepe molestiae necessitatibus sed impedit quaerat modi fugiat maxime, quibusdam et! Tempora similique in at
+                <div class="details-content__subtitle city-subtitle">
+                    180-182 Regent Street, London, W1B 5BT
                 </div>
-                <div class="lookbook-content__banner-button">
-                    view now
+                <div class="details-content__text city-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing esi
+                    elit. Vivamus at arcu sem. Vestibulum ornare eleifendit
+                    massa, nec tempor odio. Fusce posuere nunc iaculis ligula
+                    viverra iaculis. Aliquam erat volutpat. 
                 </div>
-            </div>
-            <div class="your-lookbook" style="background-image: url(images/you.jpg);">
-                <div class="choice-lookbook__title">
-                    your 
-                    <div class="choice-lookbook__subtitle">
-                        lookbook
-                    </div>
-                </div>
-                <div class="lookbook-content__banner-text">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia beatae amet earum, ab iste temporibus saepe molestiae necessitatibus sed impedit quaerat modi fugiat maxime, quibusdam et! Tempora similique in at
-                </div>
-                <div class="lookbook-content__banner-button">
-                    view now
-                </div>
+                <ul class="contact-list">
+                    <li class="contact-list__item">
+                        <span><i class="fa fa-map-marker"></i></span>
+                        180-182 Regent Street, London, W1B 5BT
+                    </li>
+                    <li class="contact-list__item">
+                        <a class="contact-list__item-link" href="tel: 0123-456-789">
+                            <span><i class="fa fa-phone"></i></span>
+                            0123-456-789 
+                        </a>
+                    </li>
+                    <li class="contact-list__item">
+                        <a class="contact-list__item-link" href="#">
+                            <span><i class="fa fa-link"></i></span>
+                            www.yourwebsite.com 
+                        </a>
+                    </li>
+                    <li class="contact-list__item">
+                        <a class="contact-list__item-link" href="#">
+                            <span><i class="fa fa-envelope-o"></i></span>
+                            support@yourwebsite.com 
+                        </a>
+                    </li>
+                    <li class="contact-list__item">
+                        <span><i class="fa fa-clock-o"></i></span>
+                        Monday-Friday: 9am to Saturday: 10am to 6pm Sunday: 10am to 2pm
+                    </li>
+                </ul>
             </div>
         </section>
     </main>
-    
-    <footer class="footer">
 
+    <footer>
+        <div class="footer-wrapper">
+            <div class="footer-information-content">
+                <div class="footer-card">
+                <span class="footer-content-title">information</span>
+                <div class="footer-card-body">
+                    <a href="#" class="footer-content-link-information">The brand</a>
+                    <a href="#" class="footer-content-link-information">Local Stores</a>
+                    <a href="#" class="footer-content-link-information">Customers service</a>
+                    <a href="#" class="footer-content-link-information">Pivacy & cookies</a>
+                    <a href="#" class="footer-content-link-information">Site map</a>
+                </div>
+                </div>
+                <div class="footer-card">
+                    <span class="footer-content-title">why buy from us</span>
+                    <div class="footer-card-body">
+                        <a href="#" class="footer-content-link-whyBuyFromUs">Shipping & returns</a>
+                        <a href="#" class="footer-content-link-whyBuyFromUs">Secure shopping</a>
+                        <a href="#" class="footer-content-link-whyBuyFromUs">Testimonials</a>
+                        <a href="#" class="footer-content-link-whyBuyFromUs">Award winning</a>
+                        <a href="#" class="footer-content-link-whyBuyFromUs">Ethical trading</a>
+                    </div>
+                </div>
+                <div class="footer-card">
+                    <span class="footer-content-title">your account</span>
+                    <div class="footer-card-body">
+                        <a href="#" class="footer-content-link-yourAcount">Sign in</a>
+                        <a href="#" class="footer-content-link-yourAcount">Register</a>
+                        <a href="#" class="footer-content-link-yourAcount">View cart</a>
+                        <a href="#" class="footer-content-link-yourAcount">View your lookbook</a>
+                        <a href="#" class="footer-content-link-yourAcount">Track an order</a>
+                        <a href="#" class="footer-content-link-yourAcount">Update information</a>
+                    </div>
+                </div>
+                <div class="footer-card">
+                    <span class="footer-content-title">lookbook</span>
+                    <div class="footer-card-body">
+                        <a href="#" class="footer-content-link-lookBook">Latest posts</a>
+                        <a href="#" class="footer-content-link-lookBook">Men’s lookbook</a>
+                        <a href="#" class="footer-content-link-lookBook">Women’s lookbook</a>
+                        <a href="#" class="footer-content-link-lookBook">Lookbooks RSS feed</a>
+                        <a href="#" class="footer-content-link-lookBook">View your lookbook</a>
+                        <a href="#" class="footer-content-link-lookBook">Delete your lookbook</a>
+                    </div>
+                </div>
+                <div class="footer-card">
+                    <span class="footer-content-title">contact details</span>
+                    <div class="footer-card-body">
+                        <a href="#" class="footer-content-link-contactDetails">Head Office: Avenue Fashion</a>
+                        <a href="#" class="footer-content-link-contactDetails">80-182 Regent Street, London.</a>
+                        <a href="#" id="footer-phone-number" class="footer-content-link-contactDetails">Telephone: 0123-456-789</a>
+                        <a href="#" id="footer-email" class="footer-content-link-contactDetails">Email: support@yourwebsite.com</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-blocks-content">
+                <div class="footer-banner-award-winner">
+                    <span id="footer-banner-award-text-top">award winner</span>
+                    <span id="footer-banner-award-text-bottom">fashion awards 2020</span>
+                </div>
+                <div class="footer-banner-social-media">
+                    <a href="#"><i class="fa fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-instagram"></i></a>
+                    <a href="#"><i class="fa fa-pinterest"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-basement">
+            <div class="footer-basement-wrapper">
+                <span><i class="fa fa-copyright" aria-hidden="true"></i>Brand Store</span>
+                <span>IstDev.com</span>
+            </div>
+        </div>
     </footer>
-
-
-
-
-
-
-    <script src="js/main.js"></script>
+    <script src="js/localStores.js"></script>
 </body>
 </html>
