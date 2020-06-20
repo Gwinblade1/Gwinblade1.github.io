@@ -227,6 +227,18 @@
         background-color: #f8f8f8;
     }
 }
+@media (max-width: 715px){
+    .lookbook-content{
+        &__item-inner{
+            width: 105px;
+            a{
+                width: 35px;
+                height: 35px;
+                font-size: $px22;
+            }
+        }
+    }
+}
 @media (max-width: 690px){
     .lookbook-filter{
         justify-content: flex-end;
@@ -281,11 +293,27 @@
 }
 @media (max-width: 655px){
     .your-lookbook{
-        padding-left: 10px;
-        padding-top: 10px;
-        .lookbook-content__banner-text{
-            max-width: 100%;
-            color: #2e2b2d;
+        min-height: 38vw;
+        &__inner{
+            position: absolute;
+            top: 0; right: 0; bottom: 0; left: 0;
+            padding: 30px 30px 15px 0;
+        }
+        &__text-wrapper{
+            display: none;
+        }
+        &__text-wrapper--active{
+            display: block;
+            box-sizing: border-box;
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            padding: 15px 10px;
+            background-color: #f8f8f8;
+            text-align: left;
+            .lookbook-content__banner-text{
+                margin-left: 0;
+                max-width: 100%;
+            }
         }
     }
 }
@@ -301,18 +329,8 @@
     }
 }
 @media (max-width: 550px){
-    .your-lookbook{
-        padding: 20px 30px 70px 0;
-        &__inner{
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-            justify-content: space-between;
-            height: 100%;
-        }
-        .lookbook-content__banner-text{
-                display: none;
-        }
+    .lookbook-filter{
+        min-height: 87px;
     }
     .lookbook-content{
         &__item{
@@ -321,6 +339,14 @@
         }
         &__banner-win{
             margin-bottom: 0;
+        }
+        &__item-inner{
+            width: 125px;
+            a{
+                width: 45px;
+                height: 45px;
+                font-size: $px30;
+            }
         }
     }
 }
@@ -354,6 +380,16 @@
             &__subtitle{
                 font-size: $px16;
                 line-height: 30px;
+            }
+        }
+    }
+    .lookbook-content{
+        &__item-inner{
+            width: 105px;
+            a{
+                width: 35px;
+                height: 35px;
+                font-size: $px22;
             }
         }
     }
