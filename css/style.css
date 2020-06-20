@@ -1094,6 +1094,17 @@ button {
   }
 }
 
+@media (max-width: 715px) {
+  .lookbook-content__item-inner {
+    width: 105px;
+  }
+  .lookbook-content__item-inner a {
+    width: 35px;
+    height: 35px;
+    font-size: 1.375rem;
+  }
+}
+
 @media (max-width: 690px) {
   .lookbook-filter {
     -webkit-box-pack: end;
@@ -1166,12 +1177,34 @@ button {
 
 @media (max-width: 655px) {
   .your-lookbook {
-    padding-left: 10px;
-    padding-top: 10px;
+    min-height: 38vw;
   }
-  .your-lookbook .lookbook-content__banner-text {
+  .your-lookbook__inner {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 30px 30px 15px 0;
+  }
+  .your-lookbook__text-wrapper {
+    display: none;
+  }
+  .your-lookbook__text-wrapper--active {
+    display: block;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 15px 10px;
+    background-color: #f8f8f8;
+    text-align: left;
+  }
+  .your-lookbook__text-wrapper--active .lookbook-content__banner-text {
+    margin-left: 0;
     max-width: 100%;
-    color: #2e2b2d;
   }
 }
 
@@ -1183,27 +1216,8 @@ button {
 }
 
 @media (max-width: 550px) {
-  .your-lookbook {
-    padding: 20px 30px 70px 0;
-  }
-  .your-lookbook__inner {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-align: end;
-    -ms-flex-align: end;
-    align-items: flex-end;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    height: 100%;
-  }
-  .your-lookbook .lookbook-content__banner-text {
-    display: none;
+  .lookbook-filter {
+    min-height: 87px;
   }
   .lookbook-content__item {
     width: 47%;
@@ -1211,6 +1225,14 @@ button {
   }
   .lookbook-content__banner-win {
     margin-bottom: 0;
+  }
+  .lookbook-content__item-inner {
+    width: 125px;
+  }
+  .lookbook-content__item-inner a {
+    width: 45px;
+    height: 45px;
+    font-size: 1.875rem;
   }
 }
 
@@ -1240,6 +1262,14 @@ button {
   .intro-container__subtitle {
     font-size: 1rem;
     line-height: 30px;
+  }
+  .lookbook-content__item-inner {
+    width: 105px;
+  }
+  .lookbook-content__item-inner a {
+    width: 35px;
+    height: 35px;
+    font-size: 1.375rem;
   }
   .your-lookbook {
     padding-bottom: 20px;
