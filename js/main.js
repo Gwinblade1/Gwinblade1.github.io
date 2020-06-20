@@ -28,17 +28,17 @@ function bannerModalWindow(event){
     if (window.matchMedia("(max-width: 966px)").matches){
         let bannerWin = document.querySelector(".lookbook-content__banner-win");
         let bannerWinTextWrapper = bannerWin.querySelector(".banner-win__text-wrapper");
-        toggleModalWindow(event, bannerWin, bannerWinTextWrapper, '.lookbook-content__banner-win',
+        toggleBannerModalWindow(event, bannerWin, bannerWinTextWrapper, '.lookbook-content__banner-win',
         '.banner-win__text-wrapper', 'banner-win__text-wrapper--active');
     }
     if (window.matchMedia("(max-width: 768px)").matches){
         let bannerJane = document.querySelector(".lookbook-content__banner-janes");
         let bannerJaneTextWrapper = bannerJane.querySelector(".banner-janes__text-wrapper");
-        toggleModalWindow(event, bannerJane, bannerJaneTextWrapper, '.lookbook-content__banner-janes',
+        toggleBannerModalWindow(event, bannerJane, bannerJaneTextWrapper, '.lookbook-content__banner-janes',
         '.banner-janes__text-wrapper', 'banner-janes__text-wrapper--active');
     }
 }
-function toggleModalWindow(event, banner, wrapper, bannerClass, wrapperClass, activeClass){
+function toggleBannerModalWindow(event, banner, wrapper, bannerClass, wrapperClass, activeClass){
     if (event.target.closest(bannerClass) && !wrapper.classList.contains(activeClass)){
         wrapper.classList.add(activeClass);
         banner.style.cssText = `height: ${wrapper.offsetHeight}px; padding: 0;`;
@@ -48,7 +48,23 @@ function toggleModalWindow(event, banner, wrapper, bannerClass, wrapperClass, ac
         banner.removeAttribute("style");
     }
 }
+function toggleLookbookModalWindow(event){
+    let lookbook = event.target.closest(".your-lookbook");
+    let lookbookTextWrapper = lookbook ? lookbook.querySelector(".your-lookbook__text-wrapper") : null;
+    let lookbookTextWrapperActive = document.querySelector(".your-lookbook__text-wrapper--active");
+    if (lookbook && !lookbookTextWrapperActive){
+        lookbookTextWrapper.classList.add("your-lookbook__text-wrapper--active");
+        lookbook.style.cssText = `min-height: ${lookbookTextWrapper.offsetHeight}px; height: ${lookbookTextWrapper.offsetHeight}px;`;
+    }
+    else if (event.target.closest(".your-lookbook__text-wrapper") !== lookbookTextWrapperActive && lookbookTextWrapperActive){
+        lookbookTextWrapperActive.classList.remove("your-lookbook__text-wrapper--active");
+        lookbookTextWrapperActive.closest(".your-lookbook").removeAttribute("style");
+    }
+}
 window.addEventListener('click', () => {bannerModalWindow(event);}, false);
-
+window.addEventListener('click', () => {
+    if (window.matchMedia("(max-width: 655px)").matches)
+        toggleLookbookModalWindow(event);
+}, false);
 defaultLoad();
 
