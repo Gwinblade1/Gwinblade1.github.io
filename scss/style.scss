@@ -1,6 +1,14 @@
 @import "_vars.scss";
 @import "_libs";
 
+body{
+    font-size: 16px;
+}
+
+button{
+    background-color: transparent;
+    border: none;
+}
 
 .container{
     width: calc(calc(1780 / 2050) * 100vw);
@@ -27,7 +35,7 @@
         height: 100%;
         background-color: rgba($color: #333333, $alpha: .75);
         text-transform: uppercase;
-        font-size: 450px;
+        font-size: $px450;
         line-height: 450px;
         &__text{
             display: flex;
@@ -50,7 +58,7 @@
         height: 100%;
         &__title{
             text-transform: uppercase;
-            font-size: 48px;
+            font-size: $px48;
             line-height: 52px;
             font-weight: 300;
             color: #ffffff;
@@ -61,7 +69,7 @@
         }
         &__subtitle{
             text-transform: uppercase;
-            font-size: 30px;
+            font-size: $px30;
             line-height: 54px;
             font-weight: 400;
             color: #ffffff;
@@ -93,7 +101,7 @@
 
     &__item{
         text-transform: uppercase;
-        font-size: 13px;
+        font-size: $px13;
         font-weight: 400;
         color: #727272;
         margin-right: 55px;
@@ -102,7 +110,7 @@
 
     &__sort-btn{
         display: none;
-        font-size: 22px;
+        font-size: $px22;
         color: #727272;
         border: none;
         background-color: #ffffff;
@@ -123,27 +131,34 @@
 
 .lookbook-content{
     width: 100%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-    grid-gap: 30px;
-    grid-auto-flow: dense;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
     padding-bottom: 60px;
     border-bottom: 1px solid #ededed;
 
     &__banner-janes{
         box-sizing: border-box;
-        grid-column: -3/-1;
-        height: 500px;
-        padding: 60px 0 15px 15px;
-        background-image: url(../images/banner-jane.jpg);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
+        position: relative;
+        max-width: 870px;
+        width: 49%;
+        padding: 14.6% 0;
+        margin-bottom: 30px;
+        background-color: #e2e3e5;
     }
-
+    &__img-janes{
+        position: absolute;
+        top: 0; right: 2%;
+        height: 99.95%;
+    }
+    &__janes-inner{
+        position: absolute;
+        top: 0; right: 0; bottom: 0; left: 0;
+        padding: 60px 0 15px 15px;
+    }
     &__banner-title{
         text-transform: uppercase;
-        font-size: 48px;
+        font-size: $px48;
         font-weight: 300;
         color: #575153;
         margin-bottom: 30px;
@@ -155,7 +170,7 @@
 
     &__banner-subtitle{
         text-transform: uppercase;
-        font-size: 13px;
+        font-size: $px13;
         color: #727272;
         margin-bottom: 20px;
     }
@@ -163,7 +178,7 @@
     &__banner-text{
         max-width: 325px;
         font-family: 'Roboto', sans-serif;
-        font-size: 16px;
+        font-size: $px16;
         font-weight: 400;
         color: #8c8b8b;
         margin-bottom: 30px;
@@ -176,7 +191,7 @@
         padding: 20px 30px;
         text-transform: uppercase;
         border: 2px solid #727272;
-        font-size: 16px;
+        font-size: $px16;
         color: #727272;
         text-align: center;
         cursor: pointer;
@@ -191,36 +206,46 @@
     &__banner-win{
         box-sizing: border-box;
         position: relative;
-        grid-column: 1/-2;
-        min-height: 500px;
-        padding: 60px 15px 15px;
-        background-image: url(../images/banner-win.jpg);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-
+        max-width: 1325px;
+        width: 75%;
+        padding: 14.6% 0;
+        margin-bottom: 30px;
+        background: linear-gradient(#efefed, #f6f6f6);
         .lookbook-content__banner-text{
             max-width: 500px;
         }
     }
-
+    &__img-win{
+        position: absolute;
+        top: 0; right: 30%;
+        height: 99.95%;
+    }
+    &__win-inner{
+        position: absolute;
+        top: 0; right: 0; bottom: 0; left: 0;
+        padding: 60px 15px 15px;
+    }
     &__banner-title--banner-win{
         position: absolute;
         right: 15px; top: 20%;
-        font-size: 200px;
+        font-size: $px200;
         font-weight: 700;
         color: #70c7c7;
         text-transform: uppercase;
         text-align: right;
-
-        .lookbook-content__banner-subtitle--banner-win{
-            font-size: 72px;
-        }
+    }
+    &__banner-subtitle--banner-win{
+        font-size: $px72;
     }
 
     &__item{
+        box-sizing: border-box;
         position: relative;
-        height: 500px;
+        width: 23.5%;
+        padding: 14.6% 0;
+        min-width: 139px;
+        min-height: 185.33px;
+        margin-bottom: 30px;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -252,7 +277,7 @@
                 justify-content: center;
                 align-items: center;
                 color: #000000;
-                font-size: 30px;
+                font-size: $px30;
                 text-decoration: none;
                 transition: .35;
                 box-shadow: 2px 2px 23px 16px rgba($color: #000000, $alpha: .13);
@@ -273,7 +298,7 @@
     font-family: 'Montserrat', sans-serif;
     &__title{
         text-transform: uppercase;
-        font-size: 48px;
+        font-size: $px48;
         font-weight: 700;
         color: #575153;
         margin-bottom: 30px;
@@ -285,17 +310,21 @@
 
 .your-lookbook{
     box-sizing: border-box;
-    max-width: 660px;
-    width: calc((660 / 2050) * 100vw);
-    min-width: 460px;
-    min-height: 500px;
+    position: relative;
+    z-index: 2;
+    width: 32vw;
+    height: 25vw;
+    max-height: 600px;
     padding: 100px 60px 15px 0;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-
+    background-color: #f8f8f8;
     & .lookbook-content__banner-text{
         margin-left: auto;
+    }
+    &__img{
+        position: absolute;
+        z-index: -1;
+        bottom: 0; left: 20px;
+        height: 90%;
     }
 }
 
