@@ -1,21 +1,15 @@
 function geodecoder(){
     const geocoder = new google.maps.Geocoder();
-    setCurrencyProperty(geocoder);
+    navigator.geolocation.getCurrentPosition(pos => {
+        geocoder.geocode({'location': {lat: parseFloat(pos.coords.latitude), lng: parseFloat(pos.coords.longitude)}}, (result, status) => {    
+            if (status === 'OK'){
+                setCurrencyProperty(result);
+            }
+        });  
+    });  
 }
-async function setCurrencyProperty(geocoder){
-  
-        let [lat, lng] = navigator.geolocation.getCurrentPosition(function (pos){ console.log(pos); return [pos.coords.latitude, pos.coords.longitude];});
-        let coordinates = await geocoder.geocode({'location': {lat: parseFloat(lat), lng: parseFloat(lng)}}, (result, status) => {
-            console.log(result);
-            return result;
-        });
-        console.log(coordinates);
-        /*switch(language){
-            case 'ua': localStorage.setItem('currency', 'UAH'); break;
-            case 'ru': localStorage.setItem('currency', 'RUB'); break;
-            case 'en': localStorage.setItem('currency', 'USD'); break;
-        }*/
-    
+function setCurrencyProperty(objectGeolocation){
+    console.log(objectGeolocation);
 }
 function changeCurrency(){
     if(localStorage.getItem('currency')){
