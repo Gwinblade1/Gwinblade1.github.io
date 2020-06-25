@@ -9,7 +9,7 @@ function geodecoder(){
     });  
 }
 function setCurrencyProperty(objectGeolocation){
-    console.log(objectGeolocation);
+    alert(`Ти живеш в ${objectGeolocation[1].formatted_address}`);
 }
 function changeCurrency(){
     if(localStorage.getItem('currency')){
