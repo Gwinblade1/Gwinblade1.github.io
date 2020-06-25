@@ -3,19 +3,40 @@
 <head>
     <meta charset='utf-8'>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet"> 
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> 
-    <title>Brand Store</title>
+    <title>lookBook</title>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/lookbook.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
 </head>
 <body>
-
     <header class="header">
-        <a href="html/LookBook.html">Click</a>
+        <div class="top-bar">
+            <div class="top-bar__inner">
+                <div class="top-bar__currency">
+                    <form action="" name="currencyForm" class="top-bar__currency-form">
+                        <label class="top-bar__currency-title">Currency:</label>
+                        <input type="text" name="currency" class="top-bar__currency-input" value="UAH" readonly>
+                        <span><i class="fa fa-angle-down"></i></span>
+                    </form>
+                    <ul class="currency-list">
+                        <li data-currency = "UAH" class="currency-list__item">
+                            UAH
+                        </li>
+                        <li data-currency="USD" class="currency-list__item">
+                            USD
+                        </li>
+                        <li data-currency = "RUB" class="currency-list__item">
+                            RUB
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </header>
     <main>
-        <section class="intro" style="background-image: url(images/intro-bg.jpg);">
+        <section class="intro" style="background-image: url(../images/intro-bg.jpg);">
             <div class="intro-vignette">
                 <div class="intro-vignette__text">
                     <div>a</div>
@@ -68,24 +89,24 @@
                         </button>
                     </div>
                     <button class="lookbook-filter__sort-btn">
-                        Sort by <span><i class="fas fa-angle-down"></i></span>
+                        Sort by <span><i class="fa fa-chevron-down"></i></span>
                     </button>    
                 </div>
                 <div class="lookbook-content">
-                    <div class="lookbook-content__item" style="background-image: url(images/item-1.png)">
+                    <div class="lookbook-content__item" style="background-image: url(../images/item-1.png)">
                         <div class="lookbook-content__item-inner">
                             <a href="#"><i class="fas fa-info"></i></a>
                             <a href="#"><i class="fas fa-heart"></i></a>
                         </div>
                     </div>
-                    <div class="lookbook-content__item" style="background-image: url(images/item-2.jpg)">
+                    <div class="lookbook-content__item" style="background-image: url(../images/item-2.jpg)">
                         <div class="lookbook-content__item-inner">
                             <a href="#"><i class="fas fa-info"></i></a>
                             <a href="#"><i class="fas fa-heart"></i></a>
                         </div>
                     </div>
                     <div class="lookbook-content__banner-janes">
-                        <img src="images/jane.png" alt="" class="lookbook-content__img-janes">
+                        <img src="../images/jane.png" alt="" class="lookbook-content__img-janes">
                         <div class="lookbook-content__janes-inner">
                             <div class="lookbook-content__banner-title">
                                 <span>jane's</span> lookbook
@@ -105,32 +126,32 @@
                             </div>
                         </div>
                     </div>
-                    <div class="lookbook-content__item" style="background-image: url(images/item-3.jpg)">
+                    <div class="lookbook-content__item" style="background-image: url(../images/item-3.jpg)">
                         <div class="lookbook-content__item-inner">
                             <a href="#"><i class="fas fa-info"></i></a>
                             <a href="#"><i class="fas fa-heart"></i></a>
                         </div>
                     </div>
-                    <div class="lookbook-content__item" style="background-image: url(images/item-4.jpg)">
+                    <div class="lookbook-content__item" style="background-image: url(../images/item-4.jpg)">
                         <div class="lookbook-content__item-inner">
                             <a href="#"><i class="fas fa-info"></i></a>
                             <a href="#"><i class="fas fa-heart"></i></a>
                         </div>
                     </div>
-                    <div class="lookbook-content__item" style="background-image: url(images/item-5.jpg)">
+                    <div class="lookbook-content__item" style="background-image: url(../images/item-5.jpg)">
                         <div class="lookbook-content__item-inner">
                             <a href="#"><i class="fas fa-info"></i></a>
                             <a href="#"><i class="fas fa-heart"></i></a>
                         </div>
                     </div>
-                    <div class="lookbook-content__item" style="background-image: url(images/item-6.jpg)">
+                    <div class="lookbook-content__item" style="background-image: url(../images/item-6.jpg)">
                         <div class="lookbook-content__item-inner">
                             <a href="#"><i class="fas fa-info"></i></a>
                             <a href="#"><i class="fas fa-heart"></i></a>
                         </div>
                     </div>
                     <div class="lookbook-content__banner-win">
-                        <img src="images/win.png" alt="" class="lookbook-content__img-win">
+                        <img src="../images/win.png" alt="" class="lookbook-content__img-win">
                         <div class="lookbook-content__win-inner">
                             <div class="lookbook-content__banner-title">
                                 <span>Win</span> a new look!
@@ -163,7 +184,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="lookbook-content__item" style="background-image: url(images/item-7.jpg)">
+                    <div class="lookbook-content__item" style="background-image: url(../images/item-7.jpg)">
                         <div class="lookbook-content__item-inner">
                             <a href="#"><i class="fas fa-info"></i></a>
                             <a href="#"><i class="fas fa-heart"></i></a>
@@ -174,7 +195,7 @@
         </section>
         <section class="choice-lookbook">
             <div class="your-lookbook">
-                <img class="your-lookbook__img" src="images/men.png" alt="">
+                <img class="your-lookbook__img" src="../images/men.png" alt="">
                <div class="your-lookbook__inner">
                 <div class="choice-lookbook__title">
                     Men's
@@ -193,7 +214,7 @@
                </div>
             </div>
             <div class="your-lookbook">
-                <img class="your-lookbook__img" src="images/women.png" alt="">
+                <img class="your-lookbook__img" src="../images/women.png" alt="">
                 <div class="your-lookbook__inner">
                     <div class="choice-lookbook__title">
                         women's
@@ -212,7 +233,7 @@
                 </div>
             </div>
             <div class="your-lookbook">
-                <img class="your-lookbook__img" src="images/you.png" alt="">
+                <img class="your-lookbook__img" src="../images/you.png" alt="">
                 <div class="your-lookbook__inner">
                     <div class="choice-lookbook__title">
                         your 
@@ -232,12 +253,86 @@
             </div>
         </section>
     </main>
-    
+    <!--
     <footer class="footer">
-
+        <div class="footer-wrapper">
+            <div class="footer-information-content">
+                <div class="footer-card">
+                <span class="footer-content-title">information</span>
+                <div class="footer-card-body">
+                    <a href="#" class="footer-content-link-information">The brand</a>
+                    <a href="#" class="footer-content-link-information">Local Stores</a>
+                    <a href="#" class="footer-content-link-information">Customers service</a>
+                    <a href="#" class="footer-content-link-information">Pivacy & cookies</a>
+                    <a href="#" class="footer-content-link-information">Site map</a>
+                </div>
+                </div>
+                <div class="footer-card">
+                    <span class="footer-content-title">why buy from us</span>
+                    <div class="footer-card-body">
+                        <a href="#" class="footer-content-link-whyBuyFromUs">Shipping & returns</a>
+                        <a href="#" class="footer-content-link-whyBuyFromUs">Secure shopping</a>
+                        <a href="#" class="footer-content-link-whyBuyFromUs">Testimonials</a>
+                        <a href="#" class="footer-content-link-whyBuyFromUs">Award winning</a>
+                        <a href="#" class="footer-content-link-whyBuyFromUs">Ethical trading</a>
+                    </div>
+                </div>
+                <div class="footer-card">
+                    <span class="footer-content-title">your account</span>
+                    <div class="footer-card-body">
+                        <a href="#" class="footer-content-link-yourAcount">Sign in</a>
+                        <a href="#" class="footer-content-link-yourAcount">Register</a>
+                        <a href="#" class="footer-content-link-yourAcount">View cart</a>
+                        <a href="#" class="footer-content-link-yourAcount">View your lookbook</a>
+                        <a href="#" class="footer-content-link-yourAcount">Track an order</a>
+                        <a href="#" class="footer-content-link-yourAcount">Update information</a>
+                    </div>
+                </div>
+                <div class="footer-card">
+                    <span class="footer-content-title">lookbook</span>
+                    <div class="footer-card-body">
+                        <a href="#" class="footer-content-link-lookBook">Latest posts</a>
+                        <a href="#" class="footer-content-link-lookBook">Men’s lookbook</a>
+                        <a href="#" class="footer-content-link-lookBook">Women’s lookbook</a>
+                        <a href="#" class="footer-content-link-lookBook">Lookbooks RSS feed</a>
+                        <a href="#" class="footer-content-link-lookBook">View your lookbook</a>
+                        <a href="#" class="footer-content-link-lookBook">Delete your lookbook</a>
+                    </div>
+                </div>
+                <div class="footer-card">
+                    <span class="footer-content-title">contact details</span>
+                    <div class="footer-card-body">
+                        <a href="#" class="footer-content-link-contactDetails">Head Office: Avenue Fashion</a>
+                        <a href="#" class="footer-content-link-contactDetails">80-182 Regent Street, London.</a>
+                        <a href="#" id="footer-phone-number" class="footer-content-link-contactDetails">Telephone: 0123-456-789</a>
+                        <a href="#" id="footer-email" class="footer-content-link-contactDetails">Email: support@yourwebsite.com</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-blocks-content">
+                <div class="footer-banner-award-winner">
+                    <span id="footer-banner-award-text-top">award winner</span>
+                    <span id="footer-banner-award-text-bottom">fashion awards 2020</span>
+                </div>
+                <div class="footer-banner-social-media">
+                    <a href="#"><i class="fa fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-instagram"></i></a>
+                    <a href="#"><i class="fa fa-pinterest"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-basement">
+            <div class="footer-basement-wrapper">
+                <span><i class="fa fa-copyright" aria-hidden="true"></i>Brand Store</span>
+                <span>IstDev.com</span>
+            </div>
+        </div>
     </footer>
-
-
-    <script src="js/main.js"></script>
+    -->
+    <script src="../js/menu-footer.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?&key=AIzaSyDkd8ZXvItx1Khh-Iu7kU4t-bQZ4abFt00&callback=geodecoder"></script>
+    
+    <script src="../js/LookBook.js"></script>
 </body>
 </html>
