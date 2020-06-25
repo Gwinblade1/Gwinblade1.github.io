@@ -4,7 +4,7 @@ function geodecoder(){
 }
 function setCurrencyProperty(geocoder){
   
-        let [lat, lng] = navigator.geolocation.getCurrentPosition(pos => {return [pos.coords.latitude, pos.coords.longitude];});
+        let [lat, lng] = navigator.geolocation.getCurrentPosition(function (pos){return [pos.coords.latitude, pos.coords.longitude];});
         geocoder.geocode({'location': {lat: parseFloat(lat), lng: parseFloat(lng)}}, (result, status) => {
             console.log(result);
         });
