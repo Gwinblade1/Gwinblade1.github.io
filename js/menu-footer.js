@@ -4,10 +4,10 @@ function geodecoder(){
 }
 function setCurrencyProperty(geocoder){
   
-        let [lat, lng] = navigator.geolocation.getCurrentPosition(function (pos){console.log(pos); return [pos.coords.latitude, pos.coords.longitude];});
-        /*geocoder.geocode({'location': {lat: parseFloat(lat), lng: parseFloat(lng)}}, (result, status) => {
+        let [lat, lng] = navigator.geolocation.getCurrentPosition(pos => {return [pos.coords.latitude, pos.coords.longitude];});
+        geocoder.geocode({'location': {lat: parseFloat(lat), lng: parseFloat(lng)}}, (result, status) => {
             console.log(result);
-        });*/
+        });
         /*switch(language){
             case 'ua': localStorage.setItem('currency', 'UAH'); break;
             case 'ru': localStorage.setItem('currency', 'RUB'); break;
@@ -41,7 +41,6 @@ function currencySelect(){
     }
 }
 window.addEventListener('load', () => {
-    setCurrencyProperty();
     changeCurrency();
 });
 window.addEventListener('click', event => {
